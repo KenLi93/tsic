@@ -101,7 +101,7 @@ estimate_lb_med_ub <- function(fun, range_start, range_end, verbose = FALSE, lab
     start_indx <- max(which(probs < value - width_toggle))
     end_indx <- min(which(probs > value + width_toggle))
 
-    m2_start_indx <- max(which( probs < ((value - width_toggle + 1)/2) ))
+    m2_start_indx <- max(which( probs < ((value - width_toggle)/2) ))
     m2_end_indx <- min(which(probs > ((value + width_toggle)/2) ))
 
     tight_range_start <- x[start_indx]
